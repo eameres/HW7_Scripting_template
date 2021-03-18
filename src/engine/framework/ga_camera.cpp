@@ -42,13 +42,14 @@ void ga_camera::update(ga_frame_params* params)
 	_transform = _transform * world_translation;
 
 	// Use arrow keys to pitch and rotate.
+	
 	float rotation = 0.0f;
-	rotation += (params->_button_mask & k_button_left) ? k_rotate_speed : 0.0f;
-	rotation += (params->_button_mask & k_button_right) ? -k_rotate_speed : 0.0f;
+	//rotation += (params->_button_mask & k_button_left) ? k_rotate_speed : 0.0f;
+	//rotation += (params->_button_mask & k_button_right) ? -k_rotate_speed : 0.0f;
 	float pitch = 0.0f;
-	pitch += (params->_button_mask & k_button_up) ? -k_rotate_speed : 0.0f;
-	pitch += (params->_button_mask & k_button_down) ? k_rotate_speed : 0.0f;
-
+	//pitch += (params->_button_mask & k_button_up) ? -k_rotate_speed : 0.0f;
+	//pitch += (params->_button_mask & k_button_down) ? k_rotate_speed : 0.0f;
+	
 	rotation = ga_degrees_to_radians(rotation);
 	pitch = ga_degrees_to_radians(pitch);
 
